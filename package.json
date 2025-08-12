@@ -1,0 +1,8 @@
+{
+  "name": "github-actions-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo '테스트 통과!' && exit 0",
+    "build": "echo '빌드 완료!'"
+  }
+}
