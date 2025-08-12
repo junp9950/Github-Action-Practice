@@ -1,0 +1,26 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Node.js 설정
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: 의존성 설치
+      run: npm install
+      
+    - name: 테스트 실행
+      run: npm test
+      
+    - name: 성공 메시지
+      run: echo "🎉 모든 작업이 완료되었습니다!"
